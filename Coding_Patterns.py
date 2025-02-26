@@ -239,6 +239,103 @@ for i in range(n):
         print(chr(65 + (n-1) - j), end=" ")  # 67 is the ASCII value of 'C'
     print()  
 
+_____________________________________
+#q19
+    1
+   123
+  12345
+ 1234567
+123456789
+rows =5
+for i in range(1, rows + 1):
+        # Print spaces
+    for j in range(rows - i):
+         print(" ", end="")
+        # Print numbers
+    for j in range(2 * i - 1):
+        print(j + 1, end="")
+        # Move to the next line after each row
+    print()
+
+____________________________________
+#q20
+      1 
+     1 2 
+    1 2 3 
+   1 2 3 4 
+  1 2 3 4 5
+
+n=5
+for i in range(n):
+    print(" " * (n-i), end=" ")
+    for j in range(0, i+1):
+        print(j+1, end=" ")
+    print()
+
+_________________________________________
+#q21
+      A 
+     A B 
+    A B C 
+   A B C D 
+  A B C D E 
+
+for i in range(n):
+    print(" " * (n-i), end=" ")
+    for j in range(0, i+1):
+        print(chr(65+j), end=" ")
+    print()
+___________________________________
+#q22
+    *    
+   * *   
+  *   *  
+ *     * 
+*********
+    for i in range(1, n + 1):
+        for j in range(1, 2 * n):
+            if j == n - i + 1 or j == n + i - 1 or i == n:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+_______________________________
+#q23
+1       1 
+1 2    2 1 
+1 2 3 3 2 1
+
+    for i in range(1, n + 1):
+    # Print increasing numbers
+       for j in range(1, i + 1):
+           print(j, end=" ")
+    # Print spaces in the middle
+       for j in range(2 * (n - i) - 1):
+           print(" ", end=" ")
+    # Print decreasing numbers
+       for j in range(i, 0, -1):
+           print(j, end=" ")
+       print()
+    pass
+________________________
+#Q
+*       * 
+* *   * * 
+*   *   * 
+* *   * * 
+*       * 
+n =5
+for i in range(n):
+    for j in range(n):
+        # Print '*' for first and last column or diagonal positions
+        if j == 0 or j == n - 1 or i == j or i + j == n - 1:
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    print()
+
+
 
 
 
