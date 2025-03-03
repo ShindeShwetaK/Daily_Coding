@@ -43,3 +43,34 @@ class Solution:
         
         return n ** 3 + self.sumOfSeries(n - 1)
   
+------------------------------
+def reverse_array(arr, l=0, r=None):
+    if r is None:
+        r = len(arr) - 1
+    
+    if l >= r:
+        return arr  # Base case: when left index meets or crosses right index
+    
+    arr[l], arr[r] = arr[r], arr[l]  # Swap elements
+    
+    return reverse_array(arr, l + 1, r - 1)  # Recursive call
+
+# Example usage:
+arr = [1, 2, 3, 4, 5]
+print(reverse_array(arr))  # Output: [5, 4, 3, 2, 1]
+
+-------------------------------
+class Solution:
+    # Function to count the frequency of all elements from 1 to N in the array.
+    def frequencyCount(self, arr):
+        #  code here
+        len_arr = (len(arr))+1
+        output = [0] * len_arr
+        
+        for i in arr:
+            output[i] += 1
+            
+        return output[1:]
+arr = [1, 1, 2, 2, 3, 4]
+[2, 2, 1, 1, 0, 0] Count the occurances of number in the array
+________________________________________
